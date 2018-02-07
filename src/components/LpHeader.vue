@@ -1,25 +1,17 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="todo in todos" :key="todo.id">
-        {{ todo.label }}
-      </li>
-    </ul>
-  </div>
+    <h2>Il y a {{ count }} todo(s)</h2>
+
 </template>
 
 <script>
 
-// import api from '../api';
-
 export default {
-  name: `Todos`,
+  name: `LpHeader`,
   computed: {
-    todos() {
-      return this.$store.getters.todos;
+    count() {
+      return this.$store.getters.count;
     },
   },
-
 };
 </script>
 
